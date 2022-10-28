@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="<?=$lang->iso.'_'.$shop->country_iso?>">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MagicTag</title>
+    <meta name="keywords" content="keywords"/>
+    <meta name="description" content="description"/>
+    <meta http-equiv="Content-Language" content="ru_RU"/>
+    <meta charset="utf-8"/>
+
+    <meta name="Robots" content="INDEX, FOLLOW"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="/js/magicTag.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/magicTag.css?v=2">
+</head>
+<body>
+<style>
+    body {
+        font-size: 15px;
+    }
+    .container{
+        max-width: 700px;
+    }
+    .tag-cont{
+        max-width: 500px;
+        margin: 30px auto 30px auto;
+    }
+    pre{
+        background-color: #eee;
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 10px;
+    }
+</style>
+<script>
+
+    $(document).ready(function() {
+
+        $('#selectCity1').magicTags({
+            placeholder: 'Выберите город',
+            label: 'Город',
+            data: [
+                {id: 1, name: 'Лондон'},
+                {id: 2, name: 'Париж'},
+                {id: 3, name: 'Берлин'},
+                {id: 4, name: 'Рим'},
+                {id: 5, name: 'Нью-Йорк'},
+                {id: 6, name: 'Вашингтон'},
+                {id: 7, name: 'Лос-Анджелес'},
+                {id: 8, name: 'Буэнос-Айрес'},
+                {id: 9, name: 'Гавана'},
+            ],
+        });
+
+        $('#selectCity2').magicTags({
+            placeholder: 'Выберите город',
+            label: 'Город',
+            data: [
+                {divider: 'Европа'},
+                {id: 1, name: 'Лондон'},
+                {id: 2, name: 'Париж'},
+                {id: 3, name: 'Берлин'},
+                {id: 4, name: 'Рим'},
+                {divider: 'Северная Америка'},
+                {id: 5, name: 'Нью-Йорк'},
+                {id: 6, name: 'Вашингтон'},
+                {id: 7, name: 'Лос-Анджелес'},
+                {divider: 'Южная Америка'},
+                {id: 8, name: 'Буэнос-Айрес'},
+                {id: 9, name: 'Гавана'},
+            ],
+        });
+
+        $('#selectCity3').magicTags({
+            placeholder: 'Выберите город',
+            label: 'Город',
+            searchInListBox: true,
+            searchPlaceholder: 'Начните набирать название',
+            data: [
+                {id: 1, name: 'Лондон'},
+                {id: 2, name: 'Париж'},
+                {id: 3, name: 'Берлин'},
+                {id: 4, name: 'Рим'},
+                {id: 5, name: 'Нью-Йорк'},
+                {id: 6, name: 'Вашингтон'},
+                {id: 7, name: 'Лос-Анджелес'},
+                {id: 8, name: 'Буэнос-Айрес'},
+                {id: 9, name: 'Гавана'},
+            ],
+        });
+
+        $('#selectCity4').magicTags({
+            placeholder: 'Выберите город',
+            label: 'Город',
+            selected: [1, 3],
+            data: [
+                {id: 1, name: 'Лондон'},
+                {id: 2, name: 'Париж'},
+                {id: 3, name: 'Берлин'},
+                {id: 4, name: 'Рим'},
+                {id: 5, name: 'Нью-Йорк'},
+                {id: 6, name: 'Вашингтон'},
+                {id: 7, name: 'Лос-Анджелес'},
+                {id: 8, name: 'Буэнос-Айрес'},
+                {id: 9, name: 'Гавана'},
+            ],
+        });
+
+        $('#selectCity5').magicTags({
+            placeholder: 'Выберите город',
+            label: 'Город',
+            multiselect: false,
+            selected: [1],
+            data: [
+                {id: 1, name: 'Лондон'},
+                {id: 2, name: 'Париж'},
+                {id: 3, name: 'Берлин'},
+                {id: 4, name: 'Рим'},
+                {id: 5, name: 'Нью-Йорк'},
+                {id: 6, name: 'Вашингтон'},
+                {id: 7, name: 'Лос-Анджелес'},
+                {id: 8, name: 'Буэнос-Айрес'},
+                {id: 9, name: 'Гавана'},
+            ],
+        });
+    })
+</script>
+
+<div class="container">
+
+    <h1 class="mb-5 mt-5">
+        Magic Tag
+    </h1>
+
+    <h3>Простой в использовании, с широким набором возможностей</h3>
+    <p>MagicTag очень гибко настраивается. На свой вкус можно менять лейбл, плейсхолдер, размер выпадающего окна, местоположение и наличие поиска, делать выбор с разделителем, делать предварительный выбор. </p>
+
+    <pre>
+$('#selectCity').magicTags({
+    placeholder: 'Выберите город',
+    label: 'Город',
+    data: [
+        {id: 1, name: 'Лондон'},
+        {id: 2, name: 'Париж'},
+        {id: 3, name: 'Берлин'},
+        ...
+    ],
+});
+</pre>
+
+    <div class="tag-cont">
+        <div id="selectCity1"></div>
+    </div>
+    <hr>
+    <h3>С разделителями</h3>
+<pre>
+data: [
+    {divider: 'Европа'},
+    {id: 1, name: 'Лондон'},
+    {id: 2, name: 'Париж'},
+    ...
+]
+</pre>
+    <div class="tag-cont">
+        <div id="selectCity2"></div>
+    </div>
+
+    <hr>
+    <h3>С явной строкой поиска</h3>
+    <pre>
+searchInListBox: true,
+searchPlaceholder: 'Начните набирать название',
+</pre>
+    <div class="tag-cont">
+        <div id="selectCity3"></div>
+    </div>
+
+    <hr>
+    <h3>Предварительный выбор</h3>
+    <pre>
+selected: [1,3],
+</pre>
+    <div class="tag-cont">
+        <div id="selectCity4"></div>
+    </div>
+
+    <hr>
+    <h3>Выбор только одного значения</h3>
+    <pre>
+multiselect: false,
+</pre>
+    <div class="tag-cont">
+        <div id="selectCity5"></div>
+    </div>
+
+
+
+    <hr>
+    <h3>Параметры</h3>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Параметр</th>
+            <th>Тип</th>
+            <th>Умолч</th>
+            <th>Описание</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>placeholder</td>
+            <td>string</td>
+            <td></td>
+            <td>Текст, который отображается пока не выбран ни один тег</td>
+        </tr>
+        <tr>
+            <td>label</td>
+            <td>string</td>
+            <td></td>
+            <td>Заголовок блока тегов</td>
+        </tr>
+        <tr>
+            <td>search</td>
+            <td>bool</td>
+            <td>true</td>
+            <td>Будет ли поиск</td>
+        </tr>
+        <tr>
+            <td>searchInListBox</td>
+            <td>bool</td>
+            <td>false</td>
+            <td>Если true, то поиск будет в выпадающем списке, иначе в блоке с тегами</td>
+        </tr>
+        <tr>
+            <td>searchPlaceholder</td>
+            <td>string</td>
+            <td></td>
+            <td>Плейсхолдер в строке поиска (работает, если searchInListBox установлен в true)</td>
+        </tr>
+        <tr>
+            <td>ifOneSelected</td>
+            <td>bool</td>
+            <td>true</td>
+            <td>Если список элементов содержит всего одно значение - автоматически будет выбрано по-умолчанию</td>
+        </tr>
+        <tr>
+            <td>multiselect</td>
+            <td>bool</td>
+            <td>true</td>
+            <td>Режим переключателя: можно ли выбирать несколько элементов списка или только один</td>
+        </tr>
+        <tr>
+            <td>listBoxMaxHeight</td>
+            <td>int</td>
+            <td>h/2</td>
+            <td>Максимальный размер выпадающего списка. По-умолчанию - половина размера окна браузера</td>
+        </tr>
+        <tr>
+            <td>selected</td>
+            <td>array</td>
+            <td></td>
+            <td>id выбранных элементов списка</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>object</td>
+            <td></td>
+            <td>
+                Список элементов
+                <pre>
+data: [
+    {id: 1, name: 'Лондон'},
+    {id: 2, name: 'Париж'},
+    ...
+]
+</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

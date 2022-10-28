@@ -1,0 +1,117 @@
+.mtags-form-tags {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  cursor: text;
+}
+.mtags-form-tags label {
+  position: absolute;
+  background: white;
+  padding: 0 10px;
+  font-size: 13px;
+  top: -11px;
+  left: 15px;
+  margin: 0;
+}
+.mtags-form-tags .mtags-input-box {
+  margin: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 29px;
+}
+.mtags-form-tags .mtags-input-box .mtags-placeholder {
+  font-style: italic;
+  color: gray;
+  position: absolute;
+  pointer-events: none;
+  top: calc(50% - 10px);
+}
+.mtags-form-tags .mtags-input-box .mtags-input {
+  border: none;
+  outline: none;
+  width: 100px;
+}
+.mtags-form-tags .mtags-input-box .mtags-input-item {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 3px 26px 3px 7px;
+  font-size: 12px;
+  border-radius: 3px;
+  margin: 2px 4px 2px 0;
+  position: relative;
+  cursor: pointer;
+}
+.mtags-form-tags .mtags-input-box .mtags-input-item::after {
+  font-weight: 400;
+  position: absolute;
+  content: '\f00d';
+  font-family: "Font Awesome 5 Free";
+  color: #333;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.mtags-form-tags .mtags-list-box {
+  margin-top: 1px;
+  position: absolute;
+  background: white;
+  width: 100%;
+  z-index: 10000000000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: none;
+}
+.mtags-form-tags .mtags-list-box .mtags-search-ico {
+  position: absolute;
+  top: 16px;
+  left: 15px;
+}
+.mtags-form-tags .mtags-list-box .mtags-input {
+  outline: 0;
+  margin: 7px 15px 7px 45px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0px 3px 0px;
+  width: calc(100% - 60px);
+}
+.mtags-form-tags .mtags-list-box .mtags-input + .mtags-list {
+  border-top: 1px solid #ccc;
+}
+.mtags-form-tags .mtags-list-box .mtags-list {
+  overflow: hidden;
+  overflow-y: auto;
+}
+.mtags-form-tags .mtags-list-box .mtags-list .mtags-list-divider {
+  background: #f5f5f5;
+  color: #666;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 15px;
+  text-align: center;
+}
+.mtags-form-tags .mtags-list-box .mtags-list .mtags-list-item {
+  padding: 7px 15px;
+  cursor: pointer;
+}
+.mtags-form-tags .mtags-list-box .mtags-list .mtags-list-item:hover {
+  background: #f5f5f5;
+}
+.mtags-form-tags .mtags-list-box .mtags-list .mtags-list-item.selected {
+  display: none;
+}
+.mtags-form-tags .mtags-list-box .mtags-list .mtags-list-item.h {
+  display: none;
+}
+.mtags-form-tags.active {
+  border-color: blue;
+}
+.mtags-form-tags.active label {
+  color: blue;
+}
+.mtags-form-tags.active .mtags-list-box {
+  display: block;
+}
